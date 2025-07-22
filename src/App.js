@@ -9,6 +9,7 @@ import SignIn from './components/pages/SignIn';
 import SignUp from './components/pages/SignUp';
 import ForgotPassword from './components/pages/ForgotPassword';
 import ResetPassword from './components/pages/ResetPassword';
+import MyTeam from './components/pages/MyTeam';
 function App() {
   return (
     <Router>
@@ -21,6 +22,7 @@ function App() {
         <Route path="/sign-up" element={<SignUp />} />
         <Route path="/forgot-password" element={<ForgotPassword />} />
         <Route path="/reset-password" element={<ResetPassword />} />
+        <Route path="/my-team" element={<MyTeam/>} />
       </Routes>
     </Router>
   );
