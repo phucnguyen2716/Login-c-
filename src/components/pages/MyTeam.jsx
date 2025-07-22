@@ -1,15 +1,18 @@
 import React, { useState } from 'react';
-import { Doughnut } from 'react-chartjs-2';
+import { Doughnut, Bar } from 'react-chartjs-2';
 import {
   Chart as ChartJS,
   ArcElement,
   Tooltip,
+  CategoryScale,
+  LinearScale,
+  BarElement,
 } from 'chart.js';
 import '../../App.css';
 
-ChartJS.register(ArcElement, Tooltip);
+ChartJS.register(ArcElement, Tooltip, CategoryScale, LinearScale, BarElement);
 
-// Dữ liệu có thêm `role`
+// Dữ liệu team
 const teamMembers = [
   {
     id: 1,
@@ -68,7 +71,7 @@ const teamMembers = [
   },
 ];
 
-// Plugin để vẽ text ở giữa doughnut
+// Plugin vẽ text giữa Doughnut
 const centerTextPlugin = {
   id: 'centerText',
   beforeDraw: (chart) => {
@@ -143,9 +146,54 @@ export default function MyTeam() {
     </table>
   );
 
+  const renderBarChart = () => {
+    const colors = ['#4CAF50', '#FF9800', '#2196F3', '#9C27B0', '#E91E63'];
+
+    const data = {
+      labels: teamMembers.map((m) => m.name),
+      datasets: [
+        {
+          label: 'Tiến độ (%)',
+          data: teamMembers.map((m) => m.progress),
+          backgroundColor: colors,
+          borderRadius: 6,
+        },
+      ],
+    };
+
+    const options = {
+      responsive: true,
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          callbacks: {
+            label: (ctx) => `${ctx.parsed.y}%`,
+          },
+        },
+      },
+      scales: {
+        y: {
+          beginAtZero: true,
+          max: 100,
+          ticks: {
+            callback: (val) => `${val}%`,
+          },
+        },
+      },
+    };
+
+    return (
+      <div style={{ maxWidth: '600px', margin: '40px auto' }}>
+        <h2 style={{ textAlign: 'center' }}>Tiến độ tổng thể</h2>
+        <Bar data={data} options={options} />
+      </div>
+    );
+  };
+
   return (
     <div className="services-page">
-      <h1 className="services-title">MY TEAM</h1>
+      <h1 className="services-title">PROJECT TEAM</h1>
+
       <div className="avatar-row">
         {teamMembers.map((member) => (
           <div key={member.id} className="avatar-card">
@@ -157,8 +205,24 @@ export default function MyTeam() {
         ))}
       </div>
 
+      {/* Chỉ hiện biểu đồ tổng khi chưa xem chi tiết */}
+      {!selectedMember && renderBarChart()}
+
+      {/* Hiện chi tiết thành viên nếu được chọn */}
       {selectedMember && (
         <div className="member-detail">
+          <button
+            onClick={() => setSelectedMember(null)}
+            style={{
+              marginBottom: '20px',
+              background: '#f1f1f1',
+              border: 'none',
+              padding: '8px 12px',
+              cursor: 'pointer',
+            }}
+          >
+            ← Quay lại
+          </button>
           <h2>Chi tiết: {selectedMember.name}</h2>
           <div className="detail-content">
             <div className="chart-container">{renderDoughnut(selectedMember)}</div>
