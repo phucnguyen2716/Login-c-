@@ -68,7 +68,6 @@ function Navbar() {
                 Team Progress
               </Link>
             </li>
-
             <li>
               <Link
                 to='/sign-in'
