@@ -1,40 +1,66 @@
+import React from "react";
 import {
   VerticalTimeline,
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
-import "react-vertical-timeline-component/style.min.css";
 
-import { experiences } from "../../constants/experiences";
+import "react-vertical-timeline-component/style.min.css";
+import { experiences } from "../../constants/experience";
 
 const WorkExperience = () => {
   return (
-    <section className='py-16 px-4'>
-      <h3 className='text-2xl font-bold mb-4'>Work Experience</h3>
+    <section className="max-container py-10">
+      <h2 className="text-3xl font-bold mb-8 text-center">Work Experience</h2>
 
-      <VerticalTimeline>
-        {experiences.map((experience, index) => (
+      <VerticalTimeline layout="2-columns" lineColor="#d1d5db">
+        {experiences.map((exp, index) => (
           <VerticalTimelineElement
-            key={experience.company_name + index}
-            date={experience.date}
-            iconStyle={{ background: experience.iconBg }}
+            key={index}
+            date={exp.date}
+            iconStyle={{
+              background: exp.iconBg,
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
             icon={
-              <div className='flex justify-center items-center w-full h-full'>
+              <div
+                style={{
+                  width: "100%",
+                  height: "100%",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+              >
                 <img
-                  src={experience.icon}
-                  alt={experience.company_name}
-                  className='w-[60%] h-[60%] object-contain'
+                  src={exp.icon}
+                  alt={exp.company_name}
+                  style={{
+                    width: "60%",
+                    height: "60%",
+                    objectFit: "contain",
+                  }}
                 />
               </div>
             }
             contentStyle={{
-              borderBottom: "6px solid " + experience.iconBg,
-              boxShadow: "none",
+              background: "#fff",
+              color: "#333",
+              border: "1px solid #ccc",
+              borderBottom: `6px solid ${exp.iconBg}`,
+              borderRadius: "12px",
+              padding: "20px",
+              boxShadow: "0 4px 12px rgba(0,0,0,0.05)",
             }}
+            contentArrowStyle={{ borderRight: "7px solid #ccc" }}
           >
-            <h3 className='text-lg font-semibold'>{experience.title}</h3>
-            <p className='text-sm text-gray-600'>{experience.company_name}</p>
-            <ul className='mt-3 list-disc list-inside space-y-1 text-sm text-gray-700'>
-              {experience.points.map((point, i) => (
+            <h3 className="text-lg font-bold">{exp.title}</h3>
+            <p className="text-sm text-gray-600 font-medium mb-2">
+              {exp.company_name}
+            </p>
+            <ul className="list-disc ml-5 text-sm text-gray-700 space-y-1">
+              {exp.points.map((point, i) => (
                 <li key={i}>{point}</li>
               ))}
             </ul>

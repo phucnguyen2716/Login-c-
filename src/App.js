@@ -10,6 +10,7 @@ import SignUp from './components/pages/SignUp';
 import ForgotPassword from './components/pages/ForgotPassword';
 import ResetPassword from './components/pages/ResetPassword';
 import MyTeam from './components/pages/MyTeam';
+import WorkExperience from './components/pages/WorkExperience';
 function App() {
   return (
     <Router>
@@ -23,6 +24,7 @@ function App() {
         <Route path="/forgot-password" element={<ForgotPassword />} />
         <Route path="/reset-password" element={<ResetPassword />} />
         <Route path="/my-team" element={<MyTeam/>} />
+        <Route path="/work-experience" element={<WorkExperience />} />
       </Routes>
     </Router>
   );
