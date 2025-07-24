@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.max-container {
+  @apply mx-auto px-4 max-w-7xl;
+}
+
+.head-text {
+  @apply text-4xl md:text-5xl font-bold;
+}
+
+.subhead-text {
+  @apply text-2xl font-semibold text-slate-700;
+}
+
+.block-container {
+  @apply relative flex justify-center items-center;
+}
+
+.btn-front {
+  @apply absolute top-0 left-0 w-full h-full bg-white z-10;
+}
+
+.btn-back {
+  @apply absolute top-0 left-0 w-full h-full bg-gradient-to-br from-blue-400 to-purple-600 z-0;
+}
