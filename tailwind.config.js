@@ -1,6 +1,7 @@
 module.exports = {
   content: [
     "./src/components/pages/WorkExperience.jsx",
+    "./src/components/pages/CTA.jsx",
   ],
   important: true,
   theme: {

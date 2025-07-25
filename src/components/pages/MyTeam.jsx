@@ -215,10 +215,23 @@ export default function MyTeam() {
             onClick={() => setSelectedMember(null)}
             style={{
               marginBottom: '20px',
-              background: '#f1f1f1',
-              border: 'none',
-              padding: '8px 12px',
+              backgroundColor: '#e0e7ff', // màu xanh nhạt (Tailwind: indigo-100)
+              border: '1px solid #c7d2fe',
+              padding: '10px 16px',
+              borderRadius: '8px',
+              color: '#1e40af', // xanh đậm (indigo-900)
+              fontWeight: '500',
+              boxShadow: '0 2px 6px rgba(0,0,0,0.1)',
               cursor: 'pointer',
+              transition: 'all 0.3s ease',
+            }}
+            onMouseOver={(e) => {
+              e.currentTarget.style.backgroundColor = '#c7d2fe';
+              e.currentTarget.style.transform = 'scale(1.03)';
+            }}
+            onMouseOut={(e) => {
+              e.currentTarget.style.backgroundColor = '#e0e7ff';
+              e.currentTarget.style.transform = 'scale(1)';
             }}
           >
             ← Quay lại

@@ -7,6 +7,7 @@ import "react-vertical-timeline-component/style.min.css";
 import { experiences } from "../../constants/experience";
 import { skills } from "../../constants/skill"
 import './timeline.css';
+import CTA  from "./CTA"
 const WorkExperience = () => {
   return (
     
@@ -116,6 +117,9 @@ const WorkExperience = () => {
           </VerticalTimeline>
         </div>
       </div>
+      <hr className='border-slate-200' />
+
+      <CTA />
     </section>
     
     
