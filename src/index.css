@@ -23,7 +23,8 @@ body:has(.card[data-color="green"]:hover) {
 
 @layer utilities {
   .max-container {
-    @apply max-w-5xl mx-auto sm:p-16 pb-12 !pt-[126px] px-8 min-h-[calc(100vh-80px)];
+    @apply max-w-5xl mx-auto sm:p-16 pb-12 px-8 min-h-[calc(100vh-80px)];
+   padding-top: 30px !important;
   }
 
   .head-text {
