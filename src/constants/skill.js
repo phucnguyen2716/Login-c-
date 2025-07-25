@@ -34,4 +34,9 @@ export const skills = [
     name: "Tailwindcss",
     type: "Frontend",
   },
+  {
+    imageUrl: "/icons/csharp.svg",
+    name: "Csharp",
+    type: "Backend",
+  },
 ];

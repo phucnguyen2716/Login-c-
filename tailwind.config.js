@@ -1,6 +1,6 @@
 module.exports = {
   content: [
-    "./src/**/*.{js,jsx,ts,tsx}", // để quét toàn bộ, không chỉ WorkExperience.jsx
+    "./src/components/pages/WorkExperience.jsx",
   ],
   important: true,
   theme: {
