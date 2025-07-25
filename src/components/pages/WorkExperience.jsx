@@ -6,6 +6,7 @@ import {
 import "react-vertical-timeline-component/style.min.css";
 import { experiences } from "../../constants/experience";
 import { skills } from "../../constants/skill"
+import './timeline.css';
 const WorkExperience = () => {
   return (
     
