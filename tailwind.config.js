@@ -2,6 +2,7 @@ module.exports = {
   content: [
     "./src/components/pages/WorkExperience.jsx",
     "./src/components/pages/CTA.jsx",
+    "./src/components/Footer.jsx",
   ],
   important: true,
   theme: {
