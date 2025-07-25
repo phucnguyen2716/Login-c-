@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "private": true,
   "dependencies": {
-    "@craco/craco": "^7.1.0",
     "@emailjs/browser": "^4.4.1",
     "@fortawesome/fontawesome-free": "^6.7.2",
     "@testing-library/jest-dom": "^6.1.5",
@@ -20,9 +19,9 @@
     "react-vertical-timeline-component": "^3.5.3"
   },
   "scripts": {
-    "start": "set NODE_OPTIONS=--openssl-legacy-provider && craco start",
-    "build": "set NODE_OPTIONS=--openssl-legacy-provider && craco build",
-    "test": "craco test",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -32,8 +31,16 @@
     ]
   },
   "browserslist": {
-    "production": [">0.2%", "not dead", "not op_mini all"],
-    "development": ["last 1 chrome version", "last 1 firefox version", "last 1 safari version"]
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   },
   "devDependencies": {
     "autoprefixer": "^10.4.13",

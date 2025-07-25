@@ -6,9 +6,9 @@ import {
 import "react-vertical-timeline-component/style.min.css";
 import { experiences } from "../../constants/experience";
 import { skills } from "../../constants/skill"
-
 const WorkExperience = () => {
   return (
+    
     <section className='max-container'>
       <h1 className='head-text'>
         Hello, I'm{" "}
@@ -44,6 +44,7 @@ const WorkExperience = () => {
           ))}
         </div>
       </div>
+      
 
       {/* Work Experience */}
       <div className='py-16'>
@@ -115,6 +116,8 @@ const WorkExperience = () => {
         </div>
       </div>
     </section>
+    
+    
   );
 };
 

@@ -29,4 +29,9 @@ export const skills = [
     name: "React",
     type: "Frontend",
   },
+  {
+    imageUrl: "/icons/tailwindcss.svg",
+    name: "Tailwindcss",
+    type: "Frontend",
+  },
 ];

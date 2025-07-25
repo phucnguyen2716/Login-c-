@@ -1,9 +1,8 @@
 module.exports = {
   content: [
-    "./src/**/*.{js,jsx,ts,tsx}", // Bao quát tất cả các tệp React
-    "./src/**/*.css", // Bao quát tất cả các tệp CSS
-    "./public/index.html",
+    "./src/**/*.{js,jsx,ts,tsx}", // để quét toàn bộ, không chỉ WorkExperience.jsx
   ],
+  important: true,
   theme: {
     extend: {
       colors: {
