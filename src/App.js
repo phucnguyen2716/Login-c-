@@ -10,6 +10,7 @@ import ForgotPassword from './components/pages/ForgotPassword';
 import ResetPassword from './components/pages/ResetPassword';
 import MyTeam from './components/pages/MyTeam';
 import WorkExperience from './components/pages/WorkExperience';
+import Contact from './components/Contact';
 function App() {
   return (
     <Router>
@@ -23,6 +24,7 @@ function App() {
         <Route path="/reset-password" element={<ResetPassword />} />
         <Route path="/my-team" element={<MyTeam/>} />
         <Route path="/products" element={<WorkExperience />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
     </Router>
   );

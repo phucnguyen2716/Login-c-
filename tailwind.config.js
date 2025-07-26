@@ -3,6 +3,7 @@ module.exports = {
     "./src/components/pages/WorkExperience.jsx",
     "./src/components/pages/CTA.jsx",
     "./src/components/Footer.jsx",
+    "./src/components/Contact.jsx",
   ],
   important: true,
   theme: {

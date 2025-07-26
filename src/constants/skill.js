@@ -40,8 +40,18 @@ export const skills = [
     type: "Frontend",
   },
   {
+    imageUrl: "/icons/threejs.svg",
+    name: "ThreeJS",
+    type: "Frontend",
+  },
+  {
     imageUrl: "/icons/csharp.svg",
     name: "Csharp",
+    type: "Backend",
+  },
+  {
+    imageUrl: "/icons/emailjs.svg",
+    name: "emailjs",
     type: "Backend",
   },
 ];
