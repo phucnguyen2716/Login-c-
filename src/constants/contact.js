@@ -9,4 +9,9 @@ export const socialLinks = [
         iconUrl: '/icons/github.svg', 
         link: 'https://github.com/phucnguyen2716',
     },
+    {
+        name: 'QRBanking',
+        iconUrl: '/icons/qrcode.svg', 
+        link: '/qrbank',
+    },
 ];
