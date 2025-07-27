@@ -1,0 +1,12 @@
+/* globals.css hoặc index.css */
+.important-max-w-180 {
+  max-width: 70% !important;
+  margin-top:2px !important;
+}
+/* Tạo class mạnh hơn, ép độ lớn và độ đậm bằng !important */
+.strong-title {
+  font-size: 1.5rem !important;    /* ~40px */
+  font-weight: 700 !important;
+  line-height: 1.2 !important;
+  letter-spacing: 0.05em !important;
+}

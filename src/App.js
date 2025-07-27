@@ -11,6 +11,7 @@ import ResetPassword from './components/pages/ResetPassword';
 import MyTeam from './components/pages/MyTeam';
 import WorkExperience from './components/pages/WorkExperience';
 import Contact from './components/Contact';
+import QRBanking from './components/pages/QRBanking';
 function App() {
   return (
     <Router>
@@ -25,6 +26,7 @@ function App() {
         <Route path="/my-team" element={<MyTeam/>} />
         <Route path="/products" element={<WorkExperience />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/qrbank" element={< QRBanking />} />
       </Routes>
     </Router>
   );

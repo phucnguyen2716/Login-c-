@@ -4,6 +4,8 @@ module.exports = {
     "./src/components/pages/CTA.jsx",
     "./src/components/Footer.jsx",
     "./src/components/Contact.jsx",
+    "./src/components/Alert.jsx",
+    "./src/components/Loader.jsx",
   ],
   important: true,
   theme: {
