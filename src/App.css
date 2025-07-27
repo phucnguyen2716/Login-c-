@@ -7,7 +7,6 @@
 }
 
 .home,
-.services,
 .sign-in {
   display: flex;
   height: 90vh;

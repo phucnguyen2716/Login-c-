@@ -5,22 +5,32 @@ import HeroSection from '../HeroSection';
 import Footer from '../Footer';
 
 function Home() {
-  const audioRef = useRef(new Audio('/PianoBGM.mp3')); // ✅ Không dùng import
-  audioRef.current.loop = true;
-  audioRef.current.volume = 0.4;
-
+  const audioRef = useRef(null); // Chỉ khởi tạo 1 lần
   const [isPlaying, setIsPlaying] = useState(false);
 
   useEffect(() => {
-    if (isPlaying) {
-      audioRef.current.play();
-    } else {
-      audioRef.current.pause();
-    }
+    // Khởi tạo audio 1 lần sau khi component mount
+    audioRef.current = new Audio('/PianoBGM.mp3');
+    audioRef.current.loop = true;
+    audioRef.current.volume = 0.4;
 
     return () => {
-      audioRef.current.pause(); // cleanup
+      audioRef.current.pause();
+      audioRef.current = null;
     };
+  }, []);
+
+  useEffect(() => {
+    const audio = audioRef.current;
+    if (!audio) return;
+
+    if (isPlaying) {
+      audio.play().catch((e) => {
+        console.warn('Autoplay blocked:', e);
+      });
+    } else {
+      audio.pause();
+    }
   }, [isPlaying]);
 
   return (
