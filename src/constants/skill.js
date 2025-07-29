@@ -50,6 +50,11 @@ export const skills = [
     type: "Backend",
   },
   {
+    imageUrl: "/icons/python.svg",
+    name: "python",
+    type: "Backend",
+  },
+  {
     imageUrl: "/icons/emailjs.svg",
     name: "emailjs",
     type: "Backend",
