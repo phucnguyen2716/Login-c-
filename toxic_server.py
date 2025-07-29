@@ -1,11 +1,11 @@
 from flask import Flask, request, jsonify
+from flask_cors import CORS
 import joblib
+from unidecode import unidecode
 
 app = Flask(__name__)
-
-# Load model và vectorizer đã train
-model = joblib.load('toxic_model.pkl')
-vectorizer = joblib.load('vectorizer.pkl')
+CORS(app) 
+model = joblib.load('toxic_model.joblib')
 
 @app.route('/predict', methods=['POST'])
 def detect_toxic():
@@ -15,11 +15,12 @@ def detect_toxic():
     if not text:
         return jsonify({'error': 'No message'}), 400
 
-    vector = vectorizer.transform([text])
-    prediction = model.predict(vector)
+    # Làm sạch text (giống khi train)
+    text_clean = unidecode(text)
 
-    is_toxic = prediction[0] == 1
-    return jsonify({'toxic': is_toxic})
+    # Dự đoán
+    prediction = model.predict([text_clean])[0]
+    return jsonify({'toxic': int(prediction == 1)})
 
 if __name__ == '__main__':
     app.run(port=5000)
