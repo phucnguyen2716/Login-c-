@@ -4,7 +4,7 @@ export const experiences = [
     company_name: "Figma",
     icon: "https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg",
     iconBg: "#e0f7fa",
-    date: "August 2023 - September 2023",
+    date: "3 June 2025 - 26 June 2025",
     points: [
       "Designed wireframes and user flows for a full-stack web app with React frontend.",
       "Focused on creating an intuitive login and forgot password experience.",
@@ -18,7 +18,7 @@ export const experiences = [
     company_name: "React + Tailwind CSS",
     icon: "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg",
     iconBg: "#e6f7ff",
-    date: "October 2023 - November 2023",
+    date: "27 June 2025 - 27 July 2025",
     points: [
       "Implemented the login UI using React functional components with Tailwind CSS.",
       "Designed a fixed country code input (+84) and OTP verification for both email and SMS.",
@@ -32,7 +32,7 @@ export const experiences = [
     company_name: "Firebase + UX Testing",
     icon: "https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg",
     iconBg: "#fff3cd",
-    date: "December 2023 - January 2024",
+    date: "28 July 2025 - 3 August 2025",
     points: [
       "Removed reCAPTCHA from OTP flow to reduce friction, using invisible mode or phone auth timeouts.",
       "Validated all inputs using Yup and Formik to provide real-time feedback.",
@@ -40,5 +40,19 @@ export const experiences = [
       "Gathered user feedback and performed usability testing on authentication flow.",
     ],
     screenshot: "https://miro.medium.com/v2/resize:fit:1200/format:webp/1*JyxOqu_aRxp6xZ69uLx6Vg.png"
+  },
+  {
+    title: "Toxic Comment Detection with Python",
+    company_name: "Python + NLP",
+    icon: "https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg",
+    iconBg: "#f0f4c3",
+    date: "4 August 2025 - 7 August 2025",
+    points: [
+      "Built a toxic comment classification model using scikit-learn and logistic regression.",
+      "Preprocessed text data using NLTK and scikit-learn pipelines (stopword removal, lemmatization).",
+      "Trained the model on the Jigsaw Toxic Comment dataset and evaluated it with F1-score metrics.",
+      "Integrated the Python backend into the web platform to flag inappropriate user comments in real time.",
+    ],
+    screenshot: "https://miro.medium.com/v2/resize:fit:1200/format:webp/1*pTgo_0sU63X3idL3oFgVRw.png"
   },
 ];
