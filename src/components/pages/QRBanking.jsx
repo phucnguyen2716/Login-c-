@@ -15,7 +15,7 @@ export default function QRBanking() {
   return (
 <div className="flex justify-center pb-8" style={{ paddingTop: "25px" }}>
       <div className="bg-white border border-gray-200 rounded-xl shadow-md px-6 py-8 w-[280px] h-[300px] text-center mx-auto">
-        <h2 className="text-sm mb-10 text-center">
+        <h2 className="text-sm mb-10 ">
           <span className="blue-gradient_text drop-shadow strong-title">
             Đóng góp để dự án tiến xa hơn
           </span>

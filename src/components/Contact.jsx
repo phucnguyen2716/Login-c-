@@ -6,7 +6,7 @@ import { Fox } from "../models/Fox";
 import useAlert from "../hooks/useAlert";
 import Alert from "./Alert";
 import Loader from "./Loader";
-import { detectToxic } from "../api/toxicApi"; 
+import { detectToxic } from "../api/toxicApi";
 
 const Contact = () => {
   const formRef = useRef();
@@ -24,8 +24,27 @@ const Contact = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (form.message.trim() === "") {
+      setLoading(true);                  
+      setCurrentAnimation("hit");
+      await new Promise((resolve) => setTimeout(resolve, 2000));
+
+      setLoading(false);
+      setCurrentAnimation("idle");
+
+      showAlert({
+        show: true,
+        text: "Please enter a message before submitting 📝",
+        type: "danger",
+      });
+      return;
+    }
     setLoading(true);
     setCurrentAnimation("hit");
+    if (form.message.trim() === "") {
+
+    }
+    await new Promise((resolve) => setTimeout(resolve, 2000));
     const isToxic = await detectToxic(form.message);
     if (isToxic) {
       setLoading(false);
