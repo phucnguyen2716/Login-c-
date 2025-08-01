@@ -1,10 +1,5 @@
 export const skills = [
   {
-    imageUrl: "/icons/css.svg",
-    name: "CSS",
-    type: "Frontend",
-  },
-  {
     imageUrl: "/icons/git.svg",
     name: "Git",
     type: "Version Control",
@@ -17,6 +12,11 @@ export const skills = [
   {
     imageUrl: "/icons/html.svg",
     name: "HTML",
+    type: "Frontend",
+  },
+  {
+    imageUrl: "/icons/css.svg",
+    name: "CSS",
     type: "Frontend",
   },
   {
