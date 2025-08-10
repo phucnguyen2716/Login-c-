@@ -45,6 +45,11 @@ export const skills = [
     type: "Frontend",
   },
   {
+    imageUrl: "/icons/vite.svg",
+    name: "ViteJs",
+    type: "Buildtool",
+  },
+  {
     imageUrl: "/icons/csharp.svg",
     name: "Csharp",
     type: "Backend",

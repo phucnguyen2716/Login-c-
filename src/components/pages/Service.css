@@ -1,0 +1,14 @@
+/* Div bọc ngoài để canh giữa */
+.calendar-container {
+  display: flex;
+  justify-content: center; /* căn giữa ngang */
+  padding-top: 10px; 
+}
+
+/* Bản thân wrapper của lịch */
+.calendar-container .sx-react-calendar-wrapper {
+  width: 90% !important; 
+  max-width: 1000px !important;
+  height: 700px !important;
+  max-height: 85vh !important;
+}
