@@ -1,14 +1,71 @@
-/* Div bọc ngoài để canh giữa */
+/* ================= CALENDAR CONTAINER ================= */
 .calendar-container {
   display: flex;
-  justify-content: center; /* căn giữa ngang */
-  padding-top: 10px; 
+  justify-content: center;
+  padding-top: 10px;
 }
 
-/* Bản thân wrapper của lịch */
 .calendar-container .sx-react-calendar-wrapper {
-  width: 90% !important; 
-  max-width: 1000px !important;
+  width: 90% !important;
+  max-width: 1200px !important;
   height: 700px !important;
   max-height: 85vh !important;
+}
+
+/* ================= PERSONAL ================= */
+[data-event-id="1"],
+[data-event-id="10"] {
+  --sx-color-primary: var(--sx-color-personal) !important;
+  --sx-color-primary-container: var(--sx-color-personal-container) !important;
+  --sx-color-on-primary-container: var(--sx-color-on-personal-container) !important;
+}
+
+.sx__event-modal.is-open[data-event-id="1"] .sx__event-modal__color-icon.sx__event-icon,
+.sx__event-modal.is-open[data-event-id="10"] .sx__event-modal__color-icon.sx__event-icon {
+  background-color: var(--sx-color-personal-container) !important;
+}
+
+/* ================= SCHOOL ================= */
+[data-event-id="2"],
+[data-event-id="4"],
+[data-event-id="7"],
+[data-event-id="9"] {
+  --sx-color-primary: var(--sx-color-school) !important;
+  --sx-color-primary-container: var(--sx-color-school-container) !important;
+  --sx-color-on-primary-container: var(--sx-color-on-school-container) !important;
+}
+
+.sx__event-modal.is-open[data-event-id="2"] .sx__event-modal__color-icon.sx__event-icon,
+.sx__event-modal.is-open[data-event-id="4"] .sx__event-modal__color-icon.sx__event-icon,
+.sx__event-modal.is-open[data-event-id="7"] .sx__event-modal__color-icon.sx__event-icon,
+.sx__event-modal.is-open[data-event-id="9"] .sx__event-modal__color-icon.sx__event-icon {
+  background-color: var(--sx-color-school-container) !important;
+}
+
+/* ================= LEISURE ================= */
+[data-event-id="3"],
+[data-event-id="5"],
+[data-event-id="6"],
+[data-event-id="8"] {
+  --sx-color-primary: var(--sx-color-leisure) !important;
+  --sx-color-primary-container: var(--sx-color-leisure-container) !important;
+  --sx-color-on-primary-container: var(--sx-color-on-leisure-container) !important;
+}
+
+.sx__event-modal.is-open[data-event-id="3"] .sx__event-modal__color-icon.sx__event-icon,
+.sx__event-modal.is-open[data-event-id="5"] .sx__event-modal__color-icon.sx__event-icon,
+.sx__event-modal.is-open[data-event-id="6"] .sx__event-modal__color-icon.sx__event-icon,
+.sx__event-modal.is-open[data-event-id="8"] .sx__event-modal__color-icon.sx__event-icon {
+  background-color: var(--sx-color-leisure-container) !important;
+}
+
+/* ================= WORK ================= */
+[data-event-id="11"] {
+  --sx-color-primary: var(--sx-color-work) !important;
+  --sx-color-primary-container: var(--sx-color-work-container) !important;
+  --sx-color-on-primary-container: var(--sx-color-on-work-container) !important;
+}
+
+.sx__event-modal.is-open[data-event-id="11"] .sx__event-modal__color-icon.sx__event-icon {
+  background-color: var(--sx-color-work-container) !important;
 }

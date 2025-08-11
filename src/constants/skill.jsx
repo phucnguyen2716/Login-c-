@@ -64,4 +64,9 @@ export const skills = [
     name: "emailjs",
     type: "Backend",
   },
+  {
+    imageUrl: "/icons/schedule-x.svg",
+    name: "schedule-x",
+    type: "Library",
+  }
 ];
