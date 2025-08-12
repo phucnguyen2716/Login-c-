@@ -55,4 +55,18 @@ export const experiences = [
     ],
     screenshot: "https://miro.medium.com/v2/resize:fit:1200/format:webp/1*pTgo_0sU63X3idL3oFgVRw.png"
   },
+  {
+  title: "User Schedule & Registration History",
+  company_name: "Schedule-X + React",
+  icon: "/icons/schedule-x.svg",
+  iconBg: "#e8f5e9",
+  date: "8 August 2025 - 15 August 2025",
+  points: [
+    "Integrated Schedule-X calendar component into the web platform for interactive scheduling.",
+    "Displayed users’ past registration history directly on the calendar with color-coded events.",
+    "Enabled drag-and-drop and resizing of events to modify registration time slots.",
+    "Customized calendar theme and styles to match the platform’s branding."
+  ],
+  screenshot: "https://cdn.dribbble.com/users/926537/screenshots/14437283/media/2a8d1e9d58b0c7d4ff60c43bda4dcda3.png"
+},
 ];
