@@ -1,47 +1,38 @@
 import React from 'react';
+import { BookOpen, GraduationCap, Lightbulb } from 'lucide-react';
 import './Cards.css';
-import CardItem from './CardItem';
 
 function Cards() {
+  const items = [
+    {
+      icon: <BookOpen className="card-icon" />,
+      title: "Kiến Thức Toàn Diện",
+      desc: "Chúng tôi cung cấp nội dung học tập phong phú, từ cơ bản đến nâng cao, giúp người học dễ dàng tiếp cận tri thức."
+    },
+    {
+      icon: <GraduationCap className="card-icon" />,
+      title: "Phát Triển Bản Thân",
+      desc: "Các khóa học được thiết kế để hỗ trợ sự tiến bộ cá nhân, nâng cao kỹ năng và định hướng sự nghiệp."
+    },
+    {
+      icon: <Lightbulb className="card-icon" />,
+      title: "Ý Tưởng Sáng Tạo",
+      desc: "Khuyến khích học viên tư duy phản biện, phát triển ý tưởng sáng tạo và áp dụng kiến thức vào thực tế."
+    }
+  ];
+
   return (
     <div className='cards'>
-      <h1>Check out these EPIC Destinations!</h1>
+      <h1 className="cards__title">Tại sao chọn chúng tôi?</h1>
       <div className='cards__container'>
-        <div className='cards__wrapper'>
-          <ul className='cards__items'>
-            <CardItem
-              src='images/img-9.jpg'
-              text='Explore the hidden waterfall deep inside the Amazon Jungle'
-              label='Adventure'
-              path='/services'
-            />
-            <CardItem
-              src='images/img-2.jpg'
-              text='Travel through the Islands of Bali in a Private Cruise'
-              label='Luxury'
-              path='/services'
-            />
-          </ul>
-          <ul className='cards__items'>
-            <CardItem
-              src='images/img-3.jpg'
-              text='Set Sail in the Atlantic Ocean visiting Uncharted Waters'
-              label='Mystery'
-              path='/services'
-            />
-            <CardItem
-              src='images/img-4.jpg'
-              text='Experience Football on Top of the Himilayan Mountains'
-              label='Adventure'
-              path='/products'
-            />
-            <CardItem
-              src='images/img-8.jpg'
-              text='Ride through the Sahara Desert on a guided camel tour'
-              label='Adrenaline'
-              path='/sign-in'
-            />
-          </ul>
+        <div className='cards__wrapper features-grid'>
+          {items.map((item, index) => (
+            <div className="feature-card" key={index}>
+              <div className="feature-icon">{item.icon}</div>
+              <h3 className="feature-title">{item.title}</h3>
+              <p className="feature-desc">{item.desc}</p>
+            </div>
+          ))}
         </div>
       </div>
     </div>

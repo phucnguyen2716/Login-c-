@@ -1,0 +1,77 @@
+.gallery-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  height: 600px;
+  overflow: hidden;
+  perspective: 2000px; /* tăng chiều sâu 3D */
+}
+
+/* Background */
+.background-img {
+  position: absolute;         
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;           
+  z-index: -1; 
+}
+
+.slide {
+  position: absolute;
+  transition: transform 0.8s ease, opacity 0.8s ease;
+  transform-style: preserve-3d;
+}
+
+.slide-img {
+  width: 750px;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 35px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.5);
+}
+
+/* Ảnh chính giữa */
+.slide.active {
+  transform: rotateY(0deg) scale(1);
+  opacity: 1;
+  z-index: 2;
+}
+
+/* Ảnh bên trái: nghiêng + dịch ra */
+.slide.prev {
+  transform: translateX(-750px) rotateY(60deg) scale(0.8);
+  opacity: 0.6;
+  z-index: 1;
+}
+
+/* Ảnh bên phải: nghiêng + dịch ra */
+.slide.next {
+  transform: translateX(750px) rotateY(-60deg) scale(0.8);
+  opacity: 0.6;
+  z-index: 1;
+}
+
+/* Overlay */
+.overlay-text {
+  position: absolute;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  text-decoration: underline;
+  cursor: pointer;
+  opacity: 0.85;
+  transition: all 0.3s ease;
+}
+
+.overlay-text:hover {
+  color: #00aaff;
+  transform: translateX(-50%) translateY(-4px);
+  opacity: 1;
+}

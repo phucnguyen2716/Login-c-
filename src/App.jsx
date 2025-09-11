@@ -12,6 +12,7 @@ import MyTeam from './components/pages/MyTeam';
 import WorkExperience from './components/pages/WorkExperience';
 import Contact from './components/Contact';
 import QRBanking from './components/pages/QRBanking';
+import DetailPage from "./components/DetailPage";
 function App() {
   return (
     <Router>
@@ -27,6 +28,7 @@ function App() {
         <Route path="/products" element={<WorkExperience />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/qrbank" element={< QRBanking />} />
+        <Route path="/detail/:name" element={<DetailPage />} />
       </Routes>
     </Router>
   );

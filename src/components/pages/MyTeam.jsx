@@ -12,7 +12,6 @@ import '../../App.css';
 
 ChartJS.register(ArcElement, Tooltip, CategoryScale, LinearScale, BarElement);
 
-// Dữ liệu team
 const teamMembers = [
   {
     id: 1,
@@ -71,7 +70,7 @@ const teamMembers = [
   },
 ];
 
-// Plugin vẽ text giữa Doughnut
+
 const centerTextPlugin = {
   id: 'centerText',
   beforeDraw: (chart) => {
@@ -183,7 +182,7 @@ export default function MyTeam() {
     };
 
     return (
-      <div style={{ maxWidth: '600px', margin: '40px auto' }}>
+      <div style={{ maxWidth: '800px', margin: '40px auto' }}>
         <h2 style={{ textAlign: 'center' }}>Tiến độ tổng thể</h2>
         <Bar data={data} options={options} />
       </div>
