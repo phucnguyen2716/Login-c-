@@ -25,7 +25,7 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (form.message.trim() === "") {
-      setLoading(true);                  
+      setLoading(true);
       setCurrentAnimation("hit");
       await new Promise((resolve) => setTimeout(resolve, 2000));
 
@@ -59,8 +59,8 @@ const Contact = () => {
     }
     emailjs
       .send(
-        process.env.REACT_APP_EMAILJS_SERVICE_ID,
-        process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
         {
           from_name: form.name,
           to_name: "JavaScript Mastery",
@@ -68,7 +68,7 @@ const Contact = () => {
           to_email: "phucnguyen2716@gmail.com",
           message: form.message,
         },
-        process.env.REACT_APP_EMAILJS_PUBLIC_KEY
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
       )
       .then(
         () => {
