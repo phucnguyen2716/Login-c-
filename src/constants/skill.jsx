@@ -25,11 +25,6 @@ export const skills = [
     type: "Frontend",
   },
   {
-    imageUrl: "/icons/nodejs.svg",
-    name: "NodeJS",
-    type: "Frontend",
-  },
-  {
     imageUrl: "/icons/react.svg",
     name: "React",
     type: "Frontend",

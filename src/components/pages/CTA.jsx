@@ -4,8 +4,8 @@ const CTA = () => {
   return (
     <section className='cta'>
       <p className='cta-text'>
-        Have a project in mind? <br className='sm:block hidden' />
-        Let’s build something together!
+       Got an event idea?<br className='sm:block hidden' />
+        Let’s make it happen with Festivo.
       </p>
       <Link to='/contact' className='btn-1'>
         Contact
